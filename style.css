@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main {
+    max-width: 500px; 
+    margin: 0 auto;
+    background-color:#fff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 6px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #c00;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+li span {
+  flex: 1;              /* занимает доступное пространство */
+  word-break: break-word; /* перенос слов на новую строку при необходимости */
+  margin-right: 10px;    /* отступ до кнопки */
+}
