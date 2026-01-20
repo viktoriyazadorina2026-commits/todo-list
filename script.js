@@ -6,15 +6,12 @@ form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   const taskText = input.value.trim();
-
-  if (taskText === '') {
-    return;
-  }
+  if (taskText === '') return;
 
   const li = document.createElement('li');
   const span = document.createElement('span');
   const deleteButton = document.createElement('button');
-
+  
   span.textContent = taskText;
   deleteButton.textContent = '✕';
 
@@ -22,14 +19,16 @@ form.addEventListener('submit', function (event) {
   li.appendChild(deleteButton);
 
   span.addEventListener('click', function () {
-    li.classList.toggle('completed');
+  span.classList.toggle('completed');
   });
 
-  deleteButton.addEventListener('click', function () {
+  deleteButton.addEventListener('click', function (event) {
+    event.stopPropagation();
     li.remove();
-  }); 
+  });
 
 
   list.appendChild(li);
   input.value = '';
+  input.focus();
 });
